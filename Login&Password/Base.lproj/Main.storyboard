@@ -65,15 +65,19 @@
                             <constraint firstItem="wQ0-xq-qfx" firstAttribute="top" secondItem="A5i-eq-Foy" secondAttribute="bottom" constant="24" id="uq0-R1-vAY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="wQ0-xq-qfx" id="gNs-Rl-ajd"/>
+                        <outlet property="userNameTextField" destination="A5i-eq-Foy" id="5jB-37-kuQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1462" y="419"/>
         </scene>
-        <!--View Controller-->
+        <!--About Me View Controller-->
         <scene sceneID="VMX-O1-udi">
             <objects>
-                <viewController id="T7F-iz-hyT" sceneMemberID="viewController">
+                <viewController id="T7F-iz-hyT" customClass="AboutMeViewController" customModule="Login_Password" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cky-gb-rOn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,12 +122,48 @@
         <!--Item 1-->
         <scene sceneID="H8p-RB-Zz9">
             <objects>
-                <viewController id="vjJ-QB-NGu" sceneMemberID="viewController">
+                <viewController id="vjJ-QB-NGu" customClass="WelcomeViewController" customModule="Login_Password" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VMH-eg-Xos">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy0-xw-0B5">
+                                <rect key="frame" x="99.5" y="124" width="176" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Q3Y-RZ-QHW"/>
+                                    <constraint firstAttribute="width" constant="176" id="Xf0-7Q-twE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6H-28-vCA">
+                                <rect key="frame" x="163" y="213" width="49" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="05z-dS-Ith"/>
+                                    <constraint firstAttribute="width" constant="49" id="wK4-QA-FzZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-ab-SDj">
+                                <rect key="frame" x="139" y="456" width="102" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eY0-hy-Dhs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fy0-xw-0B5" firstAttribute="top" secondItem="eY0-hy-Dhs" secondAttribute="top" constant="124" id="GPe-pU-2l2"/>
+                            <constraint firstItem="Fy0-xw-0B5" firstAttribute="centerX" secondItem="VMH-eg-Xos" secondAttribute="centerX" id="S6h-1X-wFZ"/>
+                            <constraint firstItem="H6H-28-vCA" firstAttribute="top" secondItem="Fy0-xw-0B5" secondAttribute="bottom" constant="36" id="hYb-g8-j7d"/>
+                            <constraint firstItem="H6H-28-vCA" firstAttribute="centerX" secondItem="VMH-eg-Xos" secondAttribute="centerX" id="wo5-Gz-tZw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" image="person" catalog="system" id="S1Y-bQ-sqz"/>
                 </viewController>
@@ -174,6 +214,9 @@
         <image name="rosette" catalog="system" width="106" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
