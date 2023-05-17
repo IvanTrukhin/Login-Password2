@@ -31,19 +31,31 @@ class LoginViewController: UIViewController {
     
     // MARK: IBActions
     
-    @IBAction func LogInPressed() {
-        guard
-            userNameTextField.text == user.login,
-            passwordTextField.text == user.password
-        else {
-            showAlert(title: "Invalid login or password", messege: "Please, enter correct login and password", textField: passwordTextField)
-        return
+    @IBAction func logInPassed(_ sender: Any) {
+            guard
+                userNameTextField.text == user.login,
+                passwordTextField.text == user.password
+            else {
+                showAlert(title: "Invalid login or password", messege: "Please, enter correct login and password", textField: passwordTextField)
+            return
+            }
+            
+            performSegue(withIdentifier: "logIn", sender: nil)
         }
-        performSegue(withIdentifier: "logIn", sender: nil)
+    
+    
+    @IBAction func forgotUserNamePassed(_ sender: Any) {
+        showAlert(title: "Oops!", messege: "Your name is \(user.login)😉")
     }
     
+    @IBAction func forgotPasswordPassed(_ sender: Any) {
+        showAlert(title: "Oops!", messege: "Your password is \(user.password)😉")
+    }
     
-    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        userNameTextField.text = nil
+        passwordTextField.text = nil
+    }
     
 }
     
