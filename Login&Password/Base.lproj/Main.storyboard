@@ -166,6 +166,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" image="person" catalog="system" id="S1Y-bQ-sqz"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Fy0-xw-0B5" id="ZM8-jA-9cw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoI-k7-w1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

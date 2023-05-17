@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         let tabBarController = segue.destination as! UITabBarController
         let welcomeVC = tabBarController.viewControllers?.first as! WelcomeViewController
         let navigationVC = tabBarController.viewControllers?.last as! UINavigationController
+        
     }
     
     
