@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     
     // MARK: IBActions
     
-    @IBAction func logInPassed(_ sender: Any) {
+    @IBAction func logInPressed() {
             guard
                 userNameTextField.text == user.login,
                 passwordTextField.text == user.password
@@ -70,3 +70,19 @@ class LoginViewController: UIViewController {
         }
     }
 
+    // MARK: Text Field Delegate
+    extension LoginViewController: UITextViewDelegate {
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextField.becomeFirstResponder()}
+        else {
+            logInPressed()
+        }
+          return true
+    }
+}
